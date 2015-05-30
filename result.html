@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- included for angular framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js"></script>
+
+    <title>Short Pump Races</title>
+
+    <script src="js/results.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">HOME</a></li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Registration<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="news.html">Latest News</a></li>
+                  </ul>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Race Information<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="support.html"></a>One Mile Race</li>
+                    <li><a href="http://www.dji.com/product/phantom-3/feature">400M Fun Run</a></li>
+                    <li><a href="index.html">Race Preparation</a></li>
+                  </ul>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">School Participation<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="index.html">Past Results</a></li>
+                  </ul>
+
+                <li><a href="index.html">Sponsorship</a></li>
+
+                <li><a href="contact.html">Contact Us</a></li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message and banner -->
+
+    <div class="container">
+
+      <div class="row featurette">
+        <div class="col-md-12">
+          <img src="https://s3-us-west-2.amazonaws.com/shortpumprace/shortpumpbanner2014.jpg">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="container"><!-- /container -->
+
+      <div ng-controller="ResultsCtrl">
+
+        <h2>Prior Results Search</h2>
+        <p>Looking for prior data</p>
+
+        <h3>Gender</h3>
+        <span><select class="input-medium" ng-model="gender">
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+        <br>
+
+        <h3>Age Group</h3>
+        <span><select class="input-medium" ng-model="age">
+          <option value="U6YR">6 and Under</option>
+          <option value="7YR">7 Years Old</option>
+          <option value="8YR">8 Years Old</option>
+          <option value="9YR">9 Years Old</option>
+        </select>
+        <br>
+
+        <h3>Race Year</h3>
+        <span><select class="input-medium" ng-model="raceYear">
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+        </select>
+        <br><br>
+
+        <p>
+          <button class="btn btn-primary" data-toggle="button" ng-click="getTopTen()">Show Top 10</button>
+          <button class="btn btn-primary" data-toggle="button" ng-click="getAllResults()">Show All Results</button>
+          <button class="btn btn-primary" data-toggle="button" ng-click="index.html">Find Individual</button>
+        </p>
+
+        <span>{{totalMessage}}</span><br>
+
+        <p>
+          <table border="1" id="results">
+            <tr>
+              <th>Place</th>
+              <th>Full Name</th>
+              <th>Time</th>
+            </tr>
+            <tr ng-repeat="result in results">
+              <td>{{result.place}}</td>
+              <td>{{result.fullName}}</td>
+              <td>{{result.time}}</td>
+            </tr>
+          </table>
+        </p>
+
+      </div>
+
+      <hr class="featurette-divider">
+
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <addresss>
+          <strong>Short Pump Races</strong><br>
+          Richmond, Virginia<br>
+        </address>
+        <br>
+      </footer>
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43051202-1', 'shortpumprace1.com');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
