@@ -1,6 +1,8 @@
 function ResultsCtrl($scope, $http) {
   $scope.messageSentFlag = 'show';
 
+  // this initializes when the browswer first renders
+
   var gender   = '';
   var ageGroup = '';
   var raceYear = '';
@@ -8,19 +10,41 @@ function ResultsCtrl($scope, $http) {
   var results = [];
   var result = {};
 
-  $scope.totalMessage = {};
+  $scope.totalMessage = '';
+
+  // get results from webserver
+
+  $http.get('/data/resultsGirls2009.json').success(function(data) {
+    $scope.allResults = data;
+  });
 
   //
   // this function returns the top ten results
   //
   $scope.getTopTen = function() {
 
-    if ($scope.gender == 'Male')
-      $scope.totalMessage = 'Get top ten for males';
-    else
-      $scope.totalMessage = 'Get top ten for females';
+    ageGroup = $scope.age;
+    raceYear = $scope.raceYear;
+    gender   = $scope.gender;
 
-    $scope.messageSentFlag = 'hide';
+    $scope.totalMessage = '';
+    $scope.results = [];
+
+    if (ageGroup == null)
+      $scope.totalMessage = 'Please enter an age group';
+    else if (raceYear == null)
+      $scope.totalMessage = 'Please enter a race year';
+    else if (gender == null)
+      $scope.totalMessage = 'Please enter a gender';
+    else
+      {
+       results = $scope.allResults;
+
+       angular.forEach(results, function(result) {
+         if (result.topTen)
+           $scope.results.push(result)
+       });
+      }
   };
 
   //
@@ -30,24 +54,19 @@ function ResultsCtrl($scope, $http) {
 
     ageGroup = $scope.age;
     raceYear = $scope.raceYear;
+    gender   = $scope.gender;
 
+    $scope.totalMessage = '';
     $scope.results = [];
 
     if (ageGroup == null)
       $scope.totalMessage = 'Please enter an age group';
-
-    result.place = 1;
-    result.fullName = 'Sanna Peterson';
-    result.time = '8:22';
-
-    $scope.results.push(result);
-
-    result.place = 2;
-    result.fullName = 'Kaya Peterson';
-    result.time = '8:35';
-
-    $scope.results.push(result);
-
+    else if (raceYear == null)
+      $scope.totalMessage = 'Please enter a race year';
+    else if (gender == null)
+      $scope.totalMessage = 'Please enter a gender';
+    else
+      $scope.results = $scope.allResults;
   };
 
   //
