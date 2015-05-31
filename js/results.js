@@ -12,11 +12,40 @@ function ResultsCtrl($scope, $http) {
 
   $scope.totalMessage = '';
 
-  // get results from webserver
+  // get results data from webserver and load it into an array
+  // these files are separate for gender and race year
 
   $http.get('/data/resultsGirls2009.json').success(function(data) {
-    $scope.allResults = data;
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2009';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
   });
+
+  $http.get('/data/resultsBoys2009.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2009';
+      result.gender = 'Male';
+      results.push(result)
+    });
+
+  });
+
+  $http.get('/data/resultsGirls2010.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2010';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
+  });
+
+  $scope.allResults = results;
 
   //
   // this function returns the top ten results
@@ -41,7 +70,7 @@ function ResultsCtrl($scope, $http) {
        results = $scope.allResults;
 
        angular.forEach(results, function(result) {
-         if (result.topTen)
+         if (result.topTen && result.ageGroup == ageGroup && result.raceYear == raceYear && result.gender == gender)
            $scope.results.push(result)
        });
       }
@@ -66,7 +95,14 @@ function ResultsCtrl($scope, $http) {
     else if (gender == null)
       $scope.totalMessage = 'Please enter a gender';
     else
-      $scope.results = $scope.allResults;
+      {
+       results = $scope.allResults;
+ 
+       angular.forEach(results, function(result) {
+         if (result.ageGroup == ageGroup && result.raceYear == raceYear && result.gender == gender)
+           $scope.results.push(result)
+       });
+      }
   };
 
   //
