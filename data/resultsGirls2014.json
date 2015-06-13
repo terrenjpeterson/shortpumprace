@@ -8,5 +8,5 @@
  { "ageGroup" : "10YR", "place" : "7", "topTen" : true, "fullName" : "Alexandra Sushkoff", "time" : "7:26"},
  { "ageGroup" : "10YR", "place" : "8", "topTen" : true, "fullName" : "Sanna Peterson", "time" : "7:26"},
  { "ageGroup" : "10YR", "place" : "9", "topTen" : true, "fullName" : "Ellie Smith", "time" : "7:36"},
- { "ageGroup" : "10YR", "place" : "10", "topTen" : true, "fullName" : "Courtney Wilson", "time" : "7:36"},
+ { "ageGroup" : "10YR", "place" : "10", "topTen" : true, "fullName" : "Courtney Wilson", "time" : "7:36"}
 ]

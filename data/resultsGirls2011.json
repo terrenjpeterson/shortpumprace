@@ -8,5 +8,5 @@
  { "ageGroup" : "7YR", "place" : "7", "topTen" : true, "fullName" : "Sally Herrington", "time" : "8:41"},
  { "ageGroup" : "7YR", "place" : "8", "topTen" : true, "fullName" : "Zoe Dixon", "time" : "8:44"},
  { "ageGroup" : "7YR", "place" : "9", "topTen" : true, "fullName" : "Mia Tan", "time" : "8:46"},
- { "ageGroup" : "7YR", "place" : "10", "topTen" : true, "fullName" : "Reagan Reiferson", "time" : "8:47"},
+ { "ageGroup" : "7YR", "place" : "10", "topTen" : true, "fullName" : "Reagan Reiferson", "time" : "8:47"}
 ]

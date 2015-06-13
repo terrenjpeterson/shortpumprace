@@ -8,5 +8,5 @@
  { "ageGroup" : "8YR", "place" : "7", "topTen" : true, "fullName" : "Mia Tan", "time" : "7:58"},
  { "ageGroup" : "8YR", "place" : "8", "topTen" : true, "fullName" : "Sanna Peterson", "time" : "8:08"},
  { "ageGroup" : "8YR", "place" : "9", "topTen" : true, "fullName" : "Sally Herrington", "time" : "8:10"},
- { "ageGroup" : "8YR", "place" : "10", "topTen" : true, "fullName" : "Sydney Walker", "time" : "8:15"},
+ { "ageGroup" : "8YR", "place" : "10", "topTen" : true, "fullName" : "Sydney Walker", "time" : "8:15"}
 ]
