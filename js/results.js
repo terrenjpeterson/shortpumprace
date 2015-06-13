@@ -48,6 +48,46 @@ function ResultsCtrl($scope, $http) {
 
   });
 
+  $http.get('/data/resultsGirls2011.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2011';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
+  });
+
+  $http.get('/data/resultsGirls2012.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2012';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
+  });
+
+  $http.get('/data/resultsGirls2013.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2013';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
+  });
+
+  $http.get('/data/resultsGirls2014.json').success(function(data) {
+
+    angular.forEach(data, function(result) {
+      result.raceYear = '2014';
+      result.gender = 'Female';
+      results.push(result)
+    });
+
+  });
+
   $scope.allResults = results;
 
   // 
@@ -66,6 +106,18 @@ function ResultsCtrl($scope, $http) {
   //
 
   $scope.findRunnerResult = function() {
+
+    $scope.results = [];
+
+    searchName = $scope.searchName;
+
+    results = $scope.allResults;
+
+    angular.forEach(results, function(result) {
+      runnerName = result.fullName;
+      if (runnerName.search(searchName) > -1)
+        $scope.results.push(result);
+    });
 
     $scope.showRunnerResults = true;
 
