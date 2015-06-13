@@ -135,12 +135,19 @@
         <p>
           <button class="btn btn-primary" data-toggle="button" ng-click="getTopTen()">Show Top 10</button>
           <button class="btn btn-primary" data-toggle="button" ng-click="getAllResults()">Show All Results</button>
-          <button class="btn btn-primary" data-toggle="button" ng-click="index.html">Find Individual</button>
+          <button class="btn btn-primary" data-toggle="button" ng-click="findIndividual()">Find Individual</button>
         </p>
 
         <span>{{totalMessage}}</span><br>
 
-        <p>
+        <div ng-show="findIndividual">
+          <form>
+            <input type="text" ng-model="searchName" ng-change="findRunnerResult()" placeholder="Type Name Here"><br>
+            <br>
+          </form>
+        </div>
+
+        <div ng-show="showGroupResults">
           <table border="1" id="results">
             <tr>
               <th>Place</th>
@@ -153,7 +160,24 @@
               <td>{{result.time}}</td>
             </tr>
           </table>
-        </p>
+        </div>
+
+        <div ng-show="showRunnerResults">
+          <table border="1" id="results">
+            <tr>
+              <th>Place</th>
+              <th>Full Name</th>
+              <th>Time</th>
+              <th>Year</th>
+            </tr>
+            <tr ng-repeat="result in results">
+              <td>{{result.place}}</td>
+              <td>{{result.fullName}}</td>
+              <td>{{result.time}}</td>
+              <td>{{result.year}}</td>
+            </tr>
+          </table>
+        </div>
 
       </div>
 

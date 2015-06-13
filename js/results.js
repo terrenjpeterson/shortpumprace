@@ -11,6 +11,9 @@ function ResultsCtrl($scope, $http) {
   var result = {};
 
   $scope.totalMessage = '';
+  $scope.findIndividual = false;
+  $scope.showGroupResults = false;
+  $scope.showRunnerResults = false;
 
   // get results data from webserver and load it into an array
   // these files are separate for gender and race year
@@ -47,6 +50,27 @@ function ResultsCtrl($scope, $http) {
 
   $scope.allResults = results;
 
+  // 
+  // this function is invoked when someone wants to enable the find individual feature
+  //
+
+  $scope.findIndividual = function() {
+
+    $scope.findIndividual = true;
+    $scope.showGroupResults = false;
+  
+  };
+
+  //
+  // this function finds runners based on search data
+  //
+
+  $scope.findRunnerResult = function() {
+
+    $scope.showRunnerResults = true;
+
+  };
+
   //
   // this function returns the top ten results
   //
@@ -59,6 +83,8 @@ function ResultsCtrl($scope, $http) {
     $scope.totalMessage = '';
     $scope.results = [];
 
+    // first validate that the right parameters were provided
+
     if (ageGroup == null)
       $scope.totalMessage = 'Please enter an age group';
     else if (raceYear == null)
@@ -67,6 +93,10 @@ function ResultsCtrl($scope, $http) {
       $scope.totalMessage = 'Please enter a gender';
     else
       {
+       $scope.showGroupResults = true;
+
+       // then parse through the data and provide the top ten for the given category
+
        results = $scope.allResults;
 
        angular.forEach(results, function(result) {
@@ -88,6 +118,8 @@ function ResultsCtrl($scope, $http) {
     $scope.totalMessage = '';
     $scope.results = [];
 
+    // first validate that the fields were entered
+
     if (ageGroup == null)
       $scope.totalMessage = 'Please enter an age group';
     else if (raceYear == null)
@@ -96,6 +128,10 @@ function ResultsCtrl($scope, $http) {
       $scope.totalMessage = 'Please enter a gender';
     else
       {
+         $scope.showGroupResults = true;
+
+       // then parse through the array to find what data is matching
+    
        results = $scope.allResults;
  
        angular.forEach(results, function(result) {
