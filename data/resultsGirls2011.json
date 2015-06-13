@@ -1,0 +1,12 @@
+[
+ { "ageGroup" : "7YR", "place" : "1", "topTen" : true, "fullName" : "Morgan Roupe", "time" : "8:14"},
+ { "ageGroup" : "7YR", "place" : "2", "topTen" : true, "fullName" : "Mary Kate Richards", "time" : "8:18"},
+ { "ageGroup" : "7YR", "place" : "3", "topTen" : true, "fullName" : "Gabriella Price", "time" : "8:24"},
+ { "ageGroup" : "7YR", "place" : "4", "topTen" : true, "fullName" : "Sanna Peterson", "time" : "8:30"},
+ { "ageGroup" : "7YR", "place" : "5", "topTen" : true, "fullName" : "Amelia Macholz", "time" : "8:34"},
+ { "ageGroup" : "7YR", "place" : "6", "topTen" : true, "fullName" : "Sydney Tyler", "time" : "8:35"},
+ { "ageGroup" : "7YR", "place" : "7", "topTen" : true, "fullName" : "Sally Herrington", "time" : "8:41"},
+ { "ageGroup" : "7YR", "place" : "8", "topTen" : true, "fullName" : "Zoe Dixon", "time" : "8:44"},
+ { "ageGroup" : "7YR", "place" : "9", "topTen" : true, "fullName" : "Mia Tan", "time" : "8:46"},
+ { "ageGroup" : "7YR", "place" : "10", "topTen" : true, "fullName" : "Reagan Reiferson", "time" : "8:47"},
+]
