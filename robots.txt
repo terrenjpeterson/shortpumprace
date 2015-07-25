@@ -1,0 +1,3 @@
+Sitemap: http://shortpumprace.com.s3-website-us-west-2.amazonaws.com/sitemap.xml
+User-agent: *
+Allow: /
