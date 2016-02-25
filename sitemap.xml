@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>http://www.shortpumprace/</loc>
+    <loc>http://www.shortpumprace.com/index.html</loc>
     <lastmod>2015-07-25</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://www.shortpumprace/index.html</loc>
-    <lastmod>2015-07-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/movin_mania.jpg</image:loc>
+      <image:title>Race Mascots</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/awards_image.jpg</image:loc>
+      <image:title>Race Trophies</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/race_sponsors.jpg</image:loc>
+      <image:title>Outdoor Activities</image:title>
+    </image:image>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/funrun.html</loc>
@@ -29,6 +36,10 @@
     <loc>http://www.shortpumprace.com/raceprep.html</loc>
     <lastmod>2015-07-25</lastmod>
     <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/finish_line.jpg</image:loc>
+      <image:title>Race Finish Line</image:title>
+    </image:image>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/registration.html</loc>
@@ -44,6 +55,14 @@
     <loc>http://www.shortpumprace.com/schools.html</loc>
     <lastmod>2015-07-25</lastmod>
     <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/kaechele_first.jpg</image:loc>
+      <image:title>Kids Receive First Place Award</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/rivers_edge_2013_first.jpg</image:loc>
+      <image:title>Runners Win Annual Race</image:title>
+    </image:image>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/sponsorship.html</loc>
