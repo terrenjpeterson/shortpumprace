@@ -2,7 +2,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>http://www.shortpumprace.com/index.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <image:image>
       <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/movin_mania.jpg</image:loc>
@@ -19,22 +19,22 @@
   </url>
   <url>
     <loc>http://www.shortpumprace.com/funrun.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/onemile.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/prior.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/raceprep.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <image:image>
       <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/finish_line.jpg</image:loc>
@@ -43,17 +43,17 @@
   </url>
   <url>
     <loc>http://www.shortpumprace.com/registration.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/result.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>http://www.shortpumprace.com/schools.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <image:image>
       <image:loc>https://s3-us-west-2.amazonaws.com/shortpumprace/kaechele_first.jpg</image:loc>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>http://www.shortpumprace.com/sponsorship.html</loc>
-    <lastmod>2015-07-25</lastmod>
+    <lastmod>2016-09-05</lastmod>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
